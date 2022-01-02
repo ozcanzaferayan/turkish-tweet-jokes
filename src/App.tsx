@@ -1,25 +1,14 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import "antd/dist/antd.min.css";
-import { Layout, Menu, Breadcrumb, Button } from "antd";
-import {
-  TwitterTweetEmbed,
-  // @ts-ignore
-} from "react-twitter-embed";
+import { Layout, Menu, Button } from "antd";
 import { RetweetOutlined } from "@ant-design/icons";
 import { Tweet } from "react-twitter-widgets";
 
 const { Header, Content, Footer } = Layout;
 
 function App() {
-  const tweets = [
-    "1477421611645030400",
-    "1476597455357677574",
-    "1408354507478736899",
-    "1432433072457363462",
-    "1476140024953458702",
-  ];
+  const tweets = require("./data/tweetIds.json");
 
   const getRandomTweet = () => {
     return tweets[Math.floor(Math.random() * tweets.length)];
