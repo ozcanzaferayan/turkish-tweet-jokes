@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/turkish-tweet-jokes/static/css/main.d0872048.css",
-    "main.js": "/turkish-tweet-jokes/static/js/main.5b0a9b10.js",
+    "main.js": "/turkish-tweet-jokes/static/js/main.b193b055.js",
     "static/js/787.d1ef32c1.chunk.js": "/turkish-tweet-jokes/static/js/787.d1ef32c1.chunk.js",
     "index.html": "/turkish-tweet-jokes/index.html",
     "main.d0872048.css.map": "/turkish-tweet-jokes/static/css/main.d0872048.css.map",
-    "main.5b0a9b10.js.map": "/turkish-tweet-jokes/static/js/main.5b0a9b10.js.map",
+    "main.b193b055.js.map": "/turkish-tweet-jokes/static/js/main.b193b055.js.map",
     "787.d1ef32c1.chunk.js.map": "/turkish-tweet-jokes/static/js/787.d1ef32c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0872048.css",
-    "static/js/main.5b0a9b10.js"
+    "static/js/main.b193b055.js"
   ]
 }
