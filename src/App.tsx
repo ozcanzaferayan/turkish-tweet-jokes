@@ -25,7 +25,7 @@ function App() {
       <Header>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <Menu.Item>Test deneme Jokes</Menu.Item>
+          <Menu.Item>Tweet Jokes</Menu.Item>
         </Menu>
       </Header>
       <Content style={{ padding: "0 50px" }}>
