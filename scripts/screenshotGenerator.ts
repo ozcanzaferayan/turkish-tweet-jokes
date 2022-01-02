@@ -16,10 +16,14 @@ let config = {
 (async () => {
   await Promise.all(
     tweetIds.map((tweetId) => {
-      if (!fs.existsSync(`./screenshots/${tweetId}-${config.theme}.png`)) {
+      try {
+        if (fs.existsSync(`./screenshots/${tweetId}-${config.theme}.png`)) {
+          return null;
+        } else {
+          return createScreenshot({ tweetId, ...config });
+        }
+      } catch (err) {
         return createScreenshot({ tweetId, ...config });
-      } else {
-        return null;
       }
     })
   );
