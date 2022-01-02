@@ -3,8 +3,11 @@ import "./App.css";
 import "antd/dist/antd.min.css";
 import { Layout, Menu, Button, Image } from "antd";
 import { RetweetOutlined } from "@ant-design/icons";
+import PullToRefresh from "react-simple-pull-to-refresh";
 
 const { Header, Content, Footer } = Layout;
+
+
 
 function App() {
   const tweets = require("./data/tweetIds.json");
@@ -15,12 +18,17 @@ function App() {
 
   const [tweetId, setTweetId] = useState(getRandomTweet(tweets));
 
-  const handleClick = (e: any) => {
-    const newTweets = tweets.filter((tweet: string) => tweet !== tweetId);
-    setTweetId(getRandomTweet(newTweets));
+  const handleClick = () => {
+    return new Promise((resolve, reject) => {
+      const newTweets = tweets.filter((tweet: string) => tweet !== tweetId);
+      setTweetId(getRandomTweet(newTweets));
+      resolve(newTweets)
+    })
   };
 
+
   return (
+    <PullToRefresh onRefresh={handleClick}>
     <Layout className="layout">
       <Header>
         <div className="logo" />
@@ -40,15 +48,18 @@ function App() {
           <br />
           <br />
           {tweetId && (
-            <Image
-              preview={false}
-              src={require(`../screenshots/${tweetId}-${"light"}.png`)}
-            />
+            <a rel="noopener" href={`https://twitter.com/i/web/status/${tweetId}`} target={'_blank'}>
+                <Image
+                  preview={false}
+                  src={require(`../screenshots/${tweetId}-${"light"}.png`)}
+                />
+              </a>
           )}
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>Tech Twitter ©2021</Footer>
     </Layout>
+    </PullToRefresh>
   );
 }
 
