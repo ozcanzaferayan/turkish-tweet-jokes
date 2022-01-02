@@ -1,22 +1,14 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import { Layout, Menu, Breadcrumb, Button } from "antd";
 import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterFollowButton,
-  TwitterHashtagButton,
-  TwitterMentionButton,
   TwitterTweetEmbed,
-  TwitterMomentShare,
-  TwitterDMButton,
-  TwitterVideoEmbed,
-  TwitterOnAirButton,
   // @ts-ignore
 } from "react-twitter-embed";
 import { RetweetOutlined } from "@ant-design/icons";
+import { Tweet } from "react-twitter-widgets";
 
 const { Header, Content, Footer } = Layout;
 
@@ -28,12 +20,15 @@ function App() {
     "1432433072457363462",
     "1476140024953458702",
   ];
-  const [tweetId, setTweetId] = useState(
-    tweets[Math.floor(Math.random() * tweets.length)]
-  );
+
+  const getRandomTweet = () => {
+    return tweets[Math.floor(Math.random() * tweets.length)];
+  };
+
+  const [tweetId, setTweetId] = useState(getRandomTweet());
 
   const handleClick = (e: any) => {
-    window.location.reload();
+    setTweetId(getRandomTweet());
   };
 
   return (
@@ -41,7 +36,7 @@ function App() {
       <Header>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <Menu.Item key={""}>Tweet Jokes</Menu.Item>
+          <Menu.Item>Tweet Jokes</Menu.Item>
         </Menu>
       </Header>
       <Content style={{ padding: "0 50px" }}>
@@ -53,7 +48,7 @@ function App() {
           >
             Rasgele
           </Button>
-          {tweetId && <TwitterTweetEmbed tweetId={tweetId} />}
+          {tweetId && <Tweet tweetId={tweetId} />}
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>Tech Twitter ©2021</Footer>
