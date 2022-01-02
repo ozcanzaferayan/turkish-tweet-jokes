@@ -26,6 +26,7 @@ function App() {
     "1476597455357677574",
     "1408354507478736899",
     "1432433072457363462",
+    "1476140024953458702",
   ];
   const [tweetId, setTweetId] = useState(
     tweets[Math.floor(Math.random() * tweets.length)]
