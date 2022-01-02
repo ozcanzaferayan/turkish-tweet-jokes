@@ -8,7 +8,7 @@ let config = {
   lang: "tr-TR",
   width: 1000,
   theme: "light",
-  padding: 25,
+  padding: 0,
   hideCard: false,
   hideThread: false,
 };

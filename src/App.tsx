@@ -28,8 +28,8 @@ function App() {
           <Menu.Item>Tweet Jokes</Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ padding: "0 50px" }}>
-        <div className="site-layout-content" style={{ margin: "16px 0" }}>
+      <Content>
+        <div className="site-layout-content">
           <Button
             type="primary"
             onClick={handleClick}
@@ -37,6 +37,7 @@ function App() {
           >
             Rasgele
           </Button>
+          <br />
           <br />
           {tweetId && (
             <Image
