@@ -3,7 +3,6 @@ import "./App.css";
 import "antd/dist/antd.min.css";
 import { Layout, Menu, Button, Image } from "antd";
 import { RetweetOutlined } from "@ant-design/icons";
-import { Tweet } from "react-twitter-widgets";
 
 const { Header, Content, Footer } = Layout;
 
