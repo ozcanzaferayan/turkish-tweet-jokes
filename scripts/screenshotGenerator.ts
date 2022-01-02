@@ -17,7 +17,7 @@ let config = {
   await Promise.all(
     tweetIds.map((tweetId) => {
       if (!fs.existsSync(`./screenshots/${tweetId}-${config.theme}.png`)) {
-        return createScreenshot(tweetId, config);
+        return createScreenshot({ tweetId, ...config });
       } else {
         return null;
       }
