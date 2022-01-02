@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/turkish-tweet-jokes/static/css/main.99cbc3a3.css",
-    "main.js": "/turkish-tweet-jokes/static/js/main.8a1b4bea.js",
+    "main.css": "/turkish-tweet-jokes/static/css/main.345c6580.css",
+    "main.js": "/turkish-tweet-jokes/static/js/main.ea512518.js",
     "static/js/787.d1ef32c1.chunk.js": "/turkish-tweet-jokes/static/js/787.d1ef32c1.chunk.js",
     "static/media/-light.png": "/turkish-tweet-jokes/static/media/1477421611645030400-light.53173660c16c848a1c4f.png",
     "index.html": "/turkish-tweet-jokes/index.html",
-    "main.99cbc3a3.css.map": "/turkish-tweet-jokes/static/css/main.99cbc3a3.css.map",
-    "main.8a1b4bea.js.map": "/turkish-tweet-jokes/static/js/main.8a1b4bea.js.map",
+    "main.345c6580.css.map": "/turkish-tweet-jokes/static/css/main.345c6580.css.map",
+    "main.ea512518.js.map": "/turkish-tweet-jokes/static/js/main.ea512518.js.map",
     "787.d1ef32c1.chunk.js.map": "/turkish-tweet-jokes/static/js/787.d1ef32c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99cbc3a3.css",
-    "static/js/main.8a1b4bea.js"
+    "static/css/main.345c6580.css",
+    "static/js/main.ea512518.js"
   ]
 }
