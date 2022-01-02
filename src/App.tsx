@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import "antd/dist/antd.min.css";
-import { Layout, Menu, Button } from "antd";
+import { Layout, Menu, Button, Image } from "antd";
 import { RetweetOutlined } from "@ant-design/icons";
 import { Tweet } from "react-twitter-widgets";
 
@@ -10,14 +10,15 @@ const { Header, Content, Footer } = Layout;
 function App() {
   const tweets = require("./data/tweetIds.json");
 
-  const getRandomTweet = () => {
+  const getRandomTweet = (tweets: string[]) => {
     return tweets[Math.floor(Math.random() * tweets.length)];
   };
 
-  const [tweetId, setTweetId] = useState(getRandomTweet());
+  const [tweetId, setTweetId] = useState(getRandomTweet(tweets));
 
   const handleClick = (e: any) => {
-    setTweetId(getRandomTweet());
+    const newTweets = tweets.filter((tweet: string) => tweet !== tweetId);
+    setTweetId(getRandomTweet(newTweets));
   };
 
   return (
@@ -37,7 +38,13 @@ function App() {
           >
             Rasgele
           </Button>
-          {tweetId && <Tweet tweetId={tweetId} />}
+          <br />
+          {tweetId && (
+            <Image
+              preview={false}
+              src={require(`../screenshots/${tweetId}-${"light"}.png`)}
+            />
+          )}
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>Tech Twitter ©2021</Footer>
