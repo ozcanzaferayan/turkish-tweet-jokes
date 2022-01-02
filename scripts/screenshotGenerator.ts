@@ -16,6 +16,7 @@ let config = {
 (async () => {
   await Promise.all(
     tweetIds.map((tweetId) => {
+      console.log("Creating screenshot for tweetId: ", tweetId);
       return createScreenshot({ tweetId, ...config });
     })
   );
